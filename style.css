@@ -1,0 +1,184 @@
+/* break point */
+
+/* ! mobile devices 320px to 480px */
+/* ! tablets 481px to 768px */
+/* ! laptops 769px to 1024px */
+/* ! large screen 1024 to 1200px */
+/* ! extra large like tv 1201px to more  */
+
+/* ? mobile first approach that im going to use */
+
+/* ! min-width: 768px means morethan 768px will applied the style not below 768px  */
+
+/* ! max-width: 768px means below 768px will applied the style not above 768px  */
+
+/* ? mobile first approach that im going to use */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  background-color: #f5f5f5;
+}
+p {
+  color: #333;
+  line-height: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+img {
+  width: 100%;
+}
+/* ? nav bar */
+nav {
+  width: 100%;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.281);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.4rem;
+}
+nav img {
+  width: 5rem;
+  margin: 10px 15px 0px 15px;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0.1rem;
+}
+nav ul li {
+  padding: 2px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #0f4c5c;
+}
+.btn {
+  background-color: #e76f51;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid rgba(49, 45, 45, 0.438);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ? header */
+header {
+  display: flex;
+  min-height: 90vh;
+  background: url(./images/headerbg.jpg);
+  /* now image is not fit correctly so we using some image properties */
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  align-items: flex-start;
+  /* text-transform: capitalize; */
+}
+.header-content {
+  text-align: center;
+  padding: 0.6rem;
+}
+.header-content h1 {
+  font-size: 5rem;
+  padding: 0.6rem;
+  color: #14213d;
+}
+.header-content a {
+  background-color: #e76f51;
+  text-decoration: none;
+  color: #f5f5f5;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid rgba(49, 45, 45, 0.438);
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+/*? layout starts from here  */
+section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+main {
+  padding: 10px;
+}
+.post-content {
+  padding: 10px;
+}
+.post-content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  color: #14213d;
+}
+.post-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* margin-top: 0.6rem; */
+  color: grey;
+  gap: 0.3rem;
+}
+.post-info a {
+  text-decoration: none;
+  color: grey;
+}
+
+.post-author {
+  margin: 10px;
+}
+
+aside {
+  padding: 10px;
+  /* background-color: #e76f51; */
+}
+.sidebar-wrapper {
+  padding: 10px;
+  text-align: center;
+}
+.sidebar-wrapper img {
+  width: 5rem;
+  border-radius: 50%;
+}
+/* ! media query starts from here */
+@media (min-width: 675px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  nav ul li {
+    padding: 0.5rem;
+  }
+  section {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+  main {
+    width: 70%;
+  }
+  aside {
+    width: 30%;
+  }
+  .sidebar-wrapper {
+    margin-top: 46%;
+  }
+}
